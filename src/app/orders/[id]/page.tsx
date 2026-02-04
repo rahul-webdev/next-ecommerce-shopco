@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { dummyOrders, Order, OrderItem } from "@/lib/dummyOrders";
-import { cn } from "@/lib/utils";
+import { cn, formatCurrency } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Image from "next/image";
 import {
@@ -133,7 +133,7 @@ export default function OrderDetailPage() {
                         <div className="flex-1">
                            <h3 className="font-bold mb-1">{item.name}</h3>
                            <p className="text-sm text-gray-500 mb-2">Quantity: {item.quantity}</p>
-                           <p className="font-bold mb-3">${item.price}</p>
+                           <p className="font-bold mb-3">{formatCurrency(item.price)}</p>
                            
                            {order.status === "delivered" && (
                                <Button 
@@ -157,7 +157,7 @@ export default function OrderDetailPage() {
                <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
                      <span className="text-gray-500">Subtotal</span>
-                     <span className="font-medium">${order.total.toFixed(2)}</span>
+                     <span className="font-medium">{formatCurrency(order.total)}</span>
                   </div>
                   <div className="flex justify-between">
                      <span className="text-gray-500">Shipping</span>
@@ -165,11 +165,11 @@ export default function OrderDetailPage() {
                   </div>
                   <div className="flex justify-between">
                      <span className="text-gray-500">Tax</span>
-                     <span className="font-medium">$0.00</span>
+                     <span className="font-medium">{formatCurrency(0)}</span>
                   </div>
                   <div className="border-t pt-3 flex justify-between text-base">
                      <span className="font-bold">Total</span>
-                     <span className="font-bold">${order.total.toFixed(2)}</span>
+                     <span className="font-bold">{formatCurrency(order.total)}</span>
                   </div>
                </div>
             </div>

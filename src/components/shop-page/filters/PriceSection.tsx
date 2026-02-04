@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/config";
 import React from "react";
 import {
   Accordion,
@@ -16,11 +17,11 @@ const PriceSection = () => {
         </AccordionTrigger>
         <AccordionContent className="pt-4" contentClassName="overflow-visible">
           <Slider
-            defaultValue={[50, 200]}
+            defaultValue={[500, 2000]}
             min={0}
-            max={250}
-            step={1}
-            label="$"
+            max={5000}
+            step={100}
+            label={siteConfig.currency.symbol}
           />
           <div className="mb-3" />
         </AccordionContent>

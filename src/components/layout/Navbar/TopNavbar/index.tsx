@@ -14,6 +14,7 @@ import InputGroup from "@/components/ui/input-group";
 import ResTopNavbar from "./ResTopNavbar";
 import CartBtn from "./CartBtn";
 import UserMenu from "./UserMenu";
+import { siteConfig } from "@/lib/config";
 
 const data: NavMenu = [
   {
@@ -85,7 +86,7 @@ const TopNavbar = () => {
               "text-2xl lg:text-[32px] mb-2 mr-3 lg:mr-10",
             ])}
           >
-            CLOTHCO
+            {siteConfig.name}
           </Link>
         </div>
         <NavigationMenu className="hidden md:flex mr-2 lg:mr-7">

@@ -8,27 +8,28 @@ import LinksSection from "./LinksSection";
 import Image from "next/image";
 import NewsLetterSection from "./NewsLetterSection";
 import LayoutSpacing from "./LayoutSpacing";
+import { siteConfig } from "@/lib/config";
 
 const socialsData: SocialNetworks[] = [
   {
     id: 1,
     icon: <FaTwitter />,
-    url: "https://twitter.com",
+    url: siteConfig.socialLinks.twitter,
   },
   {
     id: 2,
     icon: <FaFacebookF />,
-    url: "https://facebook.com",
+    url: siteConfig.socialLinks.facebook,
   },
   {
     id: 3,
     icon: <FaInstagram />,
-    url: "https://instagram.com",
+    url: siteConfig.socialLinks.instagram,
   },
   {
     id: 4,
     icon: <FaGithub />,
-    url: "https://github.com/mohammadoftadeh",
+    url: siteConfig.socialLinks.github,
   },
 ];
 
@@ -74,11 +75,10 @@ const Footer = () => {
                   "text-[28px] lg:text-[32px] mb-6",
                 ])}
               >
-                CLOTHCO
+                {siteConfig.name}
               </h1>
               <p className="text-black/60 text-sm mb-9">
-                We have clothes that suits your style and which you’re proud to
-                wear. From women to men.
+                {siteConfig.description}
               </p>
               <div className="flex items-center">
                 {socialsData.map((social) => (

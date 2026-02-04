@@ -12,7 +12,7 @@ export const newArrivalsData: Product[] = [
     title: "T-shirt with Tape Details",
     srcUrl: "/images/pic1.png",
     gallery: ["/images/pic1.png", "/images/pic10.png", "/images/pic11.png"],
-    price: 120,
+    price: 1299,
     discount: {
       amount: 0,
       percentage: 0,
@@ -24,7 +24,7 @@ export const newArrivalsData: Product[] = [
     title: "Skinny Fit Jeans",
     srcUrl: "/images/pic2.png",
     gallery: ["/images/pic2.png"],
-    price: 260,
+    price: 2499,
     discount: {
       amount: 0,
       percentage: 20,
@@ -36,7 +36,7 @@ export const newArrivalsData: Product[] = [
     title: "Chechered Shirt",
     srcUrl: "/images/pic3.png",
     gallery: ["/images/pic3.png"],
-    price: 180,
+    price: 1799,
     discount: {
       amount: 0,
       percentage: 0,
@@ -48,7 +48,7 @@ export const newArrivalsData: Product[] = [
     title: "Sleeve Striped T-shirt",
     srcUrl: "/images/pic4.png",
     gallery: ["/images/pic4.png", "/images/pic10.png", "/images/pic11.png"],
-    price: 160,
+    price: 1599,
     discount: {
       amount: 0,
       percentage: 30,
@@ -63,7 +63,7 @@ export const topSellingData: Product[] = [
     title: "Vertical Striped Shirt",
     srcUrl: "/images/pic5.png",
     gallery: ["/images/pic5.png", "/images/pic10.png", "/images/pic11.png"],
-    price: 232,
+    price: 2299,
     discount: {
       amount: 0,
       percentage: 20,
@@ -75,7 +75,7 @@ export const topSellingData: Product[] = [
     title: "Courage Graphic T-shirt",
     srcUrl: "/images/pic6.png",
     gallery: ["/images/pic6.png", "/images/pic10.png", "/images/pic11.png"],
-    price: 145,
+    price: 1399,
     discount: {
       amount: 0,
       percentage: 0,
@@ -87,7 +87,7 @@ export const topSellingData: Product[] = [
     title: "Loose Fit Bermuda Shorts",
     srcUrl: "/images/pic7.png",
     gallery: ["/images/pic7.png"],
-    price: 80,
+    price: 799,
     discount: {
       amount: 0,
       percentage: 0,
@@ -99,7 +99,7 @@ export const topSellingData: Product[] = [
     title: "Faded Skinny Jeans",
     srcUrl: "/images/pic8.png",
     gallery: ["/images/pic8.png"],
-    price: 210,
+    price: 1999,
     discount: {
       amount: 0,
       percentage: 0,
@@ -114,7 +114,7 @@ export const relatedProductData: Product[] = [
     title: "Polo with Contrast Trims",
     srcUrl: "/images/pic12.png",
     gallery: ["/images/pic12.png", "/images/pic10.png", "/images/pic11.png"],
-    price: 242,
+    price: 2399,
     discount: {
       amount: 0,
       percentage: 20,
@@ -126,7 +126,7 @@ export const relatedProductData: Product[] = [
     title: "Gradient Graphic T-shirt",
     srcUrl: "/images/pic13.png",
     gallery: ["/images/pic13.png", "/images/pic10.png", "/images/pic11.png"],
-    price: 145,
+    price: 1399,
     discount: {
       amount: 0,
       percentage: 0,
@@ -138,7 +138,7 @@ export const relatedProductData: Product[] = [
     title: "Polo with Tipping Details",
     srcUrl: "/images/pic14.png",
     gallery: ["/images/pic14.png"],
-    price: 180,
+    price: 1799,
     discount: {
       amount: 0,
       percentage: 0,
@@ -150,7 +150,7 @@ export const relatedProductData: Product[] = [
     title: "Black Striped T-shirt",
     srcUrl: "/images/pic15.png",
     gallery: ["/images/pic15.png"],
-    price: 150,
+    price: 1499,
     discount: {
       amount: 0,
       percentage: 30,
@@ -162,29 +162,29 @@ export const relatedProductData: Product[] = [
 export const reviewsData: Review[] = [
   {
     id: 1,
-    user: "Alex K.",
+    user: "Arjun K.",
     content:
-      '"Finding clothes that align with my personal style used to be a challenge until I discovered Clothco. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”',
+      '"Finding clothes that align with my personal style used to be a challenge until I discovered BharatStyles. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”',
     rating: 5,
     date: "August 14, 2023",
   },
   {
     id: 2,
-    user: "Sarah M.",
-    content: `"I'm blown away by the quality and style of the clothes I received from Clothco From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”`,
+    user: "Sneha M.",
+    content: `"I'm blown away by the quality and style of the clothes I received from BharatStyles From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”`,
     rating: 5,
     date: "August 15, 2023",
   },
   {
     id: 3,
-    user: "Ethan R.",
+    user: "Eshaan R.",
     content: `"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."`,
     rating: 5,
     date: "August 16, 2023",
   },
   {
     id: 4,
-    user: "Olivia P.",
+    user: "Ananya P.",
     content: `"As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."`,
     rating: 5,
     date: "August 17, 2023",

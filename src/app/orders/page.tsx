@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { dummyOrders } from "@/lib/dummyOrders";
-import { cn } from "@/lib/utils";
+import { cn, formatCurrency } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Image from "next/image";
 
@@ -57,7 +57,7 @@ export default function OrdersPage() {
                   <span className={cn("px-3 py-1 rounded-full text-xs font-medium border capitalize", getStatusColor(order.status))}>
                     {order.status}
                   </span>
-                  <p className="font-bold text-lg">${order.total.toFixed(2)}</p>
+                  <p className="font-bold text-lg">{formatCurrency(order.total)}</p>
                </div>
             </div>
             
