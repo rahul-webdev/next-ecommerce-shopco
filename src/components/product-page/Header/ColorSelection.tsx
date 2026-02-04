@@ -9,21 +9,7 @@ import { RootState } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
-
-const colorsData: Color[] = [
-  {
-    name: "Brown",
-    code: "bg-[#4F4631]",
-  },
-  {
-    name: "Green",
-    code: "bg-[#314F4A]",
-  },
-  {
-    name: "Blue",
-    code: "bg-[#31344F]",
-  },
-];
+import data from "@/data/index.json";
 
 const ColorSelection = () => {
   const { colorSelection } = useAppSelector(
@@ -37,7 +23,7 @@ const ColorSelection = () => {
         Select Colors
       </span>
       <div className="flex items-center flex-wrap space-x-3 sm:space-x-4">
-        {colorsData.map((color, index) => (
+        {(data.colors as Color[]).map((color, index) => (
           <button
             key={index}
             type="button"

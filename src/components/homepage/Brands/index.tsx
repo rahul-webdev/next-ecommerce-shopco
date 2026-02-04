@@ -1,34 +1,12 @@
 import Image from "next/image";
 import React from "react";
-
-const brandsData: { id: string; srcUrl: string }[] = [
-  {
-    id: "versace",
-    srcUrl: "/icons/versace-logo.svg",
-  },
-  {
-    id: "zara",
-    srcUrl: "/icons/zara-logo.svg",
-  },
-  {
-    id: "gucci",
-    srcUrl: "/icons/gucci-logo.svg",
-  },
-  {
-    id: "prada",
-    srcUrl: "/icons/prada-logo.svg",
-  },
-  {
-    id: "calvin-klein",
-    srcUrl: "/icons/calvin-klein-logo.svg",
-  },
-];
+import data from "@/data/index.json";
 
 const Brands = () => {
   return (
     <div className="bg-black">
       <div className="max-w-frame mx-auto flex flex-wrap items-center justify-center md:justify-between py-5 md:py-0 sm:px-4 xl:px-0 space-x-7">
-        {brandsData.map((brand) => (
+        {data.brands.map((brand) => (
           <Image
             key={brand.id}
             priority

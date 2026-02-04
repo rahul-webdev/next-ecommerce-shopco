@@ -9,6 +9,7 @@ import Image from "next/image";
 import NewsLetterSection from "./NewsLetterSection";
 import LayoutSpacing from "./LayoutSpacing";
 import { siteConfig } from "@/lib/config";
+import data from "@/data/index.json";
 
 const socialsData: SocialNetworks[] = [
   {
@@ -30,29 +31,6 @@ const socialsData: SocialNetworks[] = [
     id: 4,
     icon: <FaGithub />,
     url: siteConfig.socialLinks.github,
-  },
-];
-
-const paymentBadgesData: PaymentBadge[] = [
-  {
-    id: 1,
-    srcUrl: "/icons/Visa.svg",
-  },
-  {
-    id: 2,
-    srcUrl: "/icons/mastercard.svg",
-  },
-  {
-    id: 3,
-    srcUrl: "/icons/paypal.svg",
-  },
-  {
-    id: 4,
-    srcUrl: "/icons/applePay.svg",
-  },
-  {
-    id: 5,
-    srcUrl: "/icons/googlePay.svg",
   },
 ];
 
@@ -120,7 +98,7 @@ const Footer = () => {
               </Link>
             </p>
             <div className="flex items-center">
-              {paymentBadgesData.map((badge, _, arr) => (
+              {(data.paymentBadges as PaymentBadge[]).map((badge, _, arr) => (
                 <span
                   key={badge.id}
                   className={cn([

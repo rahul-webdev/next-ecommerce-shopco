@@ -1,39 +1,17 @@
 import Link from "next/link";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import data from "@/data/index.json";
 
 type Category = {
   title: string;
   slug: string;
 };
 
-const categoriesData: Category[] = [
-  {
-    title: "T-shirts",
-    slug: "/shop?category=t-shirts",
-  },
-  {
-    title: "Shorts",
-    slug: "/shop?category=shorts",
-  },
-  {
-    title: "Shirts",
-    slug: "/shop?category=shirts",
-  },
-  {
-    title: "Hoodie",
-    slug: "/shop?category=hoodie",
-  },
-  {
-    title: "Jeans",
-    slug: "/shop?category=jeans",
-  },
-];
-
 const CategoriesSection = () => {
   return (
     <div className="flex flex-col space-y-0.5 text-black/60">
-      {categoriesData.map((category, idx) => (
+      {(data.categories as Category[]).map((category, idx) => (
         <Link
           key={idx}
           href={category.slug}

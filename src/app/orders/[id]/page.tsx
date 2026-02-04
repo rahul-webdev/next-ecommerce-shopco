@@ -5,7 +5,8 @@ import { useRouter, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { dummyOrders, Order, OrderItem } from "@/lib/dummyOrders";
+import data from "@/data/index.json";
+import { Order, OrderItem } from "@/types/order.types";
 import { cn, formatCurrency } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Image from "next/image";
@@ -37,7 +38,7 @@ export default function OrderDetailPage() {
     }
 
     if (params.id) {
-      const foundOrder = dummyOrders.find((o) => o.id === params.id);
+      const foundOrder = (data.orders as Order[]).find((o) => o.id === params.id);
       if (foundOrder) {
         setOrder(foundOrder);
       } else {

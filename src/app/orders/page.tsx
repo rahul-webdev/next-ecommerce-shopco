@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { dummyOrders } from "@/lib/dummyOrders";
+import data from "@/data/index.json";
+import { Order } from "@/types/order.types";
 import { cn, formatCurrency } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Image from "next/image";
@@ -42,7 +43,7 @@ export default function OrdersPage() {
       </h1>
       
       <div className="space-y-4">
-        {dummyOrders.map((order) => (
+        {(data.orders as Order[]).map((order) => (
           <Link 
             href={`/orders/${order.id}`} 
             key={order.id}

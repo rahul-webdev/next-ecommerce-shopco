@@ -6,26 +6,12 @@ import React, { useState } from "react";
 import ProductDetailsContent from "./ProductDetailsContent";
 import ReviewsContent from "./ReviewsContent";
 import FaqContent from "./FaqContent";
+import data from "@/data/index.json";
 
 type TabBtn = {
   id: number;
   label: string;
 };
-
-const tabBtnData: TabBtn[] = [
-  {
-    id: 1,
-    label: "Product Details",
-  },
-  {
-    id: 2,
-    label: "Rating & Reviews",
-  },
-  {
-    id: 3,
-    label: "FAQs",
-  },
-];
 
 const Tabs = () => {
   const [active, setActive] = useState<number>(1);
@@ -33,7 +19,7 @@ const Tabs = () => {
   return (
     <div>
       <div className="flex items-center mb-6 sm:mb-8 overflow-x-auto">
-        {tabBtnData.map((tab) => (
+        {(data.productTabs as TabBtn[]).map((tab) => (
           <Button
             key={tab.id}
             variant="ghost"

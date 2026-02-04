@@ -7,30 +7,12 @@ import {
 } from "@/components/ui/accordion";
 import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import data from "@/data/index.json";
 
 type DressStyle = {
   title: string;
   slug: string;
 };
-
-const dressStylesData: DressStyle[] = [
-  {
-    title: "Casual",
-    slug: "/shop?style=casual",
-  },
-  {
-    title: "Formal",
-    slug: "/shop?style=formal",
-  },
-  {
-    title: "Party",
-    slug: "/shop?style=party",
-  },
-  {
-    title: "Gym",
-    slug: "/shop?style=gym",
-  },
-];
 
 const DressStyleSection = () => {
   return (
@@ -41,7 +23,7 @@ const DressStyleSection = () => {
         </AccordionTrigger>
         <AccordionContent className="pt-4 pb-0">
           <div className="flex flex-col text-black/60 space-y-0.5">
-            {dressStylesData.map((dStyle, idx) => (
+            {(data.dressStyleFilters as DressStyle[]).map((dStyle, idx) => (
               <Link
                 key={idx}
                 href={dStyle.slug}
